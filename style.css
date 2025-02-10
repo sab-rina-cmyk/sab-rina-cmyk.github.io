@@ -1,0 +1,16 @@
+.header {
+    padding: 40px;
+    text-align: center;
+    background-color: #715f82;
+    color: white;
+    font-size: 20px;
+  }
+
+body {
+    font-family:"Helvetica" }
+
+h2 {
+  padding: 10px;
+  background-color: #715f82;
+  color: white;
+}
