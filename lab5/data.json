@@ -1,0 +1,75 @@
+    {
+        "cats": [
+          {
+            "name": "Luna",
+            "breed": "Maine Coon",
+            "age": 4,
+            "color": "Gray and white",
+            "personality": "Gentle and affectionate"
+          },
+          {
+            "name": "Milo",
+            "breed": "British Shorthair",
+            "age": 2,
+            "color": "Blue-gray",
+            "personality": "Calm but playful"
+          },
+          {
+            "name": "Nala",
+            "breed": "Bengal",
+            "age": 3,
+            "color": "Golden spotted",
+            "personality": "Energetic and curious"
+          },
+          {
+            "name": "Simba",
+            "breed": "Siberian",
+            "age": 5,
+            "color": "Brown tabby",
+            "personality": "Loyal and friendly"
+          },
+          {
+            "name": "Chloe",
+            "breed": "Ragdoll",
+            "age": 6,
+            "color": "Cream and gray",
+            "personality": "Relaxed and cuddly"
+          },
+          {
+            "name": "Leo",
+            "breed": "Abyssinian",
+            "age": 2,
+            "color": "Ruddy brown",
+            "personality": "Adventurous and smart"
+          },
+          {
+            "name": "Bo",
+            "breed": "American Shorthair",
+            "age": 16,
+            "color": "Brown tabby",
+            "personality": "Lazy and loud"
+          },
+          {
+            "name": "Oliver",
+            "breed": "American Shorthair",
+            "age": 3,
+            "color": "Silver tabby",
+            "personality": "Friendly and social"
+          },
+          {
+            "name": "Daisy",
+            "breed": "Scottish Fold",
+            "age": 1,
+            "color": "Cream",
+            "personality": "Sweet and playful"
+          },
+          {
+            "name": "Jack",
+            "breed": "Turkish Van",
+            "age": 4,
+            "color": "White with ginger patches",
+            "personality": "Mischievous and curious"
+          }
+        ]
+      }
+      
