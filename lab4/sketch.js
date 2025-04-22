@@ -2,30 +2,35 @@
 
 var sleepyBo;
 let sillyBo;
+let sillyBoGraphic;
 
 let sillyX, sillyY;
 let sillyXSpeed, sillyYSpeed;
 let isBouncing = false;
 
-function preload() {
-  sillyBo = loadImage('sillybo.jpeg'); 
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
-
 
   sleepyBo = createVideo('sleepybo.mp4'); 
   sleepyBo.hide();
   sleepyBo.volume(0); 
   sleepyBo.loop();
 
-  
+  sillyBo = createImg('sillybo.jpeg');
+  sillyBo.hide();
+
+
+  sillyBoGraphic = createGraphics(2, 1);
+  sillyBo.elt.onload = () => {
+    sillyBoGraphic = createGraphics(sillyBo.width, sillyBo.height);
+    sillyBoGraphic.image(sillyBo, 0, 0);
+  };
+
   sillyX = random(width);
   sillyY = random(height);
-  sillyXSpeed = random(2, 5);
-  sillyYSpeed = random(2, 5);
+  sillyXSpeed = random(5, 10);
+  sillyYSpeed = random(5, 10);
 }
 
 function draw() {
@@ -36,20 +41,17 @@ function draw() {
   textAlign(CENTER, TOP);
   fill(255); 
   text("☆ SLEEPY BO CAM ☆", width / 2, 30);
-  
 
   textSize(18);  
   text("Click anywhere for a silly surprise!", width / 2, 70); 
 
-  let newWidth = sillyBo.width / 30;
-  let newHeight = sillyBo.height / 30;
-
+  let newWidth = sillyBoGraphic.width / 30;
+  let newHeight = sillyBoGraphic.height / 30;
 
   if (isBouncing) {
     sillyX += sillyXSpeed;
     sillyY += sillyYSpeed;
 
- 
     if (sillyX < newWidth / 2 || sillyX > width - newWidth / 2) {
       sillyXSpeed *= -1;
     }
@@ -58,9 +60,7 @@ function draw() {
     }
   }
 
- 
-  image(sillyBo, sillyX, sillyY, newWidth, newHeight);
-
+  image(sillyBoGraphic, sillyX, sillyY, newWidth, newHeight);
   image(sleepyBo, width / 2, height / 2, 800, 400);
 }
 
