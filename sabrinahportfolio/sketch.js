@@ -57,6 +57,10 @@ function setup() {
 }
 
 function draw() {
+
+  // This is my favourite block of code! I think the wiggle animation gives my portfolio a playful vibe. 
+  // It took a while to get right but I'm pround of myself for getting it to finally work!
+
   if (isHovered) {
     for (let i = 0; i < spans.length; i++) {
       const offset = i * verticalLetterSpacing;

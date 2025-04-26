@@ -304,7 +304,7 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.95); /* combined transform */
+    transform: translate(-50%, -50%) scale(0.95); 
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
     text-align: center;
@@ -357,12 +357,5 @@ html {
     background: #eee;
   }
  
- 
-
-@media (max-width: 768px) {
-    .projects {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    }
-  }
   
 
