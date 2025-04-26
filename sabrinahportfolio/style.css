@@ -1,0 +1,368 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html {
+    overflow-y: scroll; 
+    scrollbar-width: none; 
+  }
+  
+  body {
+    overflow: -moz-scrollbars-none; 
+    -ms-overflow-style: none; 
+  }
+  
+  ::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  body, html {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+/* nav bar animation remix ref = https://codepen.io/sbgoswami/pen/WWMQYQ*/
+/* START */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+    font-family: puffin-display-soft, sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  
+  .navbar ul:hover li a {
+    transform: scale(1.5);
+    opacity: 0.2;
+    filter: blur(2px);
+  }
+  
+  .navbar ul li a:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+    color: #333;
+  }
+  
+  .navbar ul li a:before {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffedb1;
+    transition: 0.5s;
+    transform-origin: right;
+    border-radius: 6px;
+    transform: scaleX(0);
+    z-index: -1;
+  }
+  
+  .navbar ul li a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  .navbar-name {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: puffin-display-soft, sans-serif;
+    color: #333;
+    margin-right: auto;
+  }
+  /* END */
+  /* nav bar animation remix ref = https://codepen.io/sbgoswami/pen/WWMQYQ*/
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+  
+  .profile-header-group {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  #wiggle-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+  }
+  
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .word-group {
+    display: block;
+  }
+  
+  .word-group:first-child {
+    margin-bottom: 0.5rem;
+  }
+  
+  .word-group span {
+    font-size: 6rem;
+    font-family: puffin-display-soft, sans-serif;
+    color: #333;
+    display: inline-block;
+  }
+
+  body {
+    padding-top: 8rem;
+  }
+  
+/* Scrolling subheading text remix ref : https://www.w3schools.in/css/examples/infinite-scrolling-text */
+/* START */
+
+.scrolling-text-container {
+    margin: 0 2px;
+    background-color: #ffedb1;
+    border-radius: 100px;
+    overflow: hidden;
+    max-width: 20;
+    width: 100%;
+}
+
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 30px 0;
+    font-family:  Helvetica, ;
+
+}
+
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+/* END */
+/* Scrolling subheading text remix ref : https://www.w3schools.in/css/examples/infinite-scrolling-text */ 
+
+.about-me {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'puffin-display-soft', sans-serif;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .about-container {
+    max-width: 1100px;
+    text-align: center;
+  }
+  
+  .about-container h2 {
+    font-family: puffin-display-soft, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 100;
+  }
+  
+  .about-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-family: puffin-display-soft, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  /* project card preview overlay remix reference: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+  /* START */
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    display: block;
+  }
+  
+  .project-card .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95); /* combined transform */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-align: center;
+
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    width: 80%;
+    color: #ffedb1;
+  }
+
+  .project-card:hover .overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .project-card .overlay .text {
+    font-family: 'puffin-display-soft', sans-serif;
+    font-weight: 450;
+    color: #000000; 
+    font-size: 1.2rem;  
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
+  
+  .project-card:hover img {
+    opacity: 0.25;
+  }
+  
+
+  /* END */
+  /* project card preview overlay remix reference: https://www.w3schools.com/howto/howto_css_image_overlay.asp */
+  
+  @media (max-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    background: #eee;
+  }
+ 
+ 
+
+@media (max-width: 768px) {
+    .projects {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+
